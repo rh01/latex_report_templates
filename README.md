@@ -1,11 +1,27 @@
-# DAT250: Report for the software technology study project
+Latex Template For Project In Chinese
+=============
 
-Latex is a text processing system aimed at scientific writing.  
+- 支持中文
+- xelatex编译
+- ...
 
-This repository contains starter LaTeX code that you can use for writing the project report. The example code should have must constructs that you will need to get write the report. Learning LaTeX will also be helpful for later writing you master's thesis report.
+License
+-------------
 
-LaTeX is available for several platforms (Windows, Mac OS, Linux). A good place to start is here: https://www.latex-project.org/get/
+Copyright 2018 @rh01 http://github.com/rh01
 
-It is certainly possible to use LaTeX is more advanced ways compared to what is shown here. If you have suggestion for extension of the template contact Lars.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+ 
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
 
 
