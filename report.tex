@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+
+\usepackage{a4wide}
+\usepackage{mathptm}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{graphicx}
+% 代码样式
+\usepackage{algorithm}
+
+
+% 参考文献引用上标,但是这个是英文reference
+% \usepackage[super,square]{natbib}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{shapes.misc, positioning}
+\usepackage{listings}
+\usepackage{color}
+% 设定页边距
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{ geometry}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{svg}
+%设置首行缩进
+\usepackage{indentfirst}
+\setlength{\parindent}{2em }
+\setlength{\parskip}{0pt }
+%段前段后距离设置
+%页眉和页脚%页眉和页脚
+\definecolor{mauve}{rgb}{0.88, 0.69, 1.0}
+% 创建一个新的命令，控制
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+% Xelatex中文宏包
+\usepackage{CTEX}
+\begin{document}
+
+\title{MarkLogic调研}
+
+\author{@rh01 https://github.com/rh01}
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+
+  多模型数据库（Multi-Model Database）是新一代的数据库，与只支持单一数据模型的传统数据库有所不同，多模型数据库是一种在统一、
+  综合的平台下同时支持多种不同的数据模型的数据库，这些数据模型可包括传统的关系模型和NoSQL数据模型，并且多模型数据库
+  具有自己一种或多种的查询语言，并不仅仅依赖于传统的SQL查询语言，这使得数据组织、管理和操作变得十分的简单和便捷。
+  在企业中，拥有结构良好的数据和基于NoSQL技术的综合数据平台对用户是有益的 \cite{lu2017multi} ，
+  这种方法显著地降低了集成，迁移，开发，维护和运营等问题.
+  因此，在本论文中，我们将介绍多数据模型的数据库代表-MarkLogic, 将会介绍它的底层架构，所支持的数据模型，以及在底层和顶层如何访问、管理和操作
+  数据，最后设计Benchmark来对MarkLogic进行评测，并与文档数据库MongoDB进行比较.
+
+  \noindent 关键字：Multi-Model Database; MarkLogic; MongoDB
+
+\end{abstract}
+
+
+
+%\input{commands}
+
+\input{sections/introduction}
+
+\input{sections/background}
+
+\input{sections/api}
+
+\input{sections/experiments}
+
+\input{sections/conclusion}
+
+
+\bibliographystyle{plain}
+\bibliography{report}
+
+
+\end{document}

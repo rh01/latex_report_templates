@@ -1,0 +1,89 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // Author: EthanDENG
+    // Homepage: http://ddswhu.com/
+    // Last Update: 2017/11/01
+    // Latest Version: http://ddswhu.com/download/
+
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "XeLaTeX",
+            "type": "shell",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "${file}"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "PDF Preview",
+            "type": "shell",
+            "command": "SumatraPDF -reuse-instance ${fileBasenameNoExtension}.pdf",
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "PDFLaTeX",
+            "type": "shell",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "${file}"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "BibTeX",
+            "type": "shell",
+            "command": "bibtex",
+            "args": [
+                "${fileBasenameNoExtension}.aux"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "LaTeX",
+            "type": "shell",
+            "command": "latex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "${file}"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "dvi2pdf",
+            "type": "shell",
+            "command": "dvipdfmx",
+            "args": [
+                "${fileBasenameNoExtension}.dvi"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "dvi2ps",
+            "type": "shell",
+            "command": "dvips",
+            "args": [
+                "${fileBasenameNoExtension}.dvi"
+            ],
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "ps2pdf",
+            "type": "shell",
+            "command": "ps2pdf",
+            "args": [
+                "${fileBasenameNoExtension}.ps"
+            ],
+            "problemMatcher": "$tsc-watch"
+        }
+    ]
+}
